@@ -1,0 +1,11 @@
+﻿@model SofaOnSofa.Domain.Entities.ShoppingCart
+
+<div id="cart">
+    <span class="caption">
+        <b>Ваша корзина:</b>
+        @Model.Lines.Sum(x => x.Quantity) item(s),
+        @Model.ComputeTotalValue().ToString("c")
+    </span>
+
+    @Html.ActionLink("Корзина", "Index", "ShoppingCart", new { returnUrl = Request.Url.PathAndQuery }, null)
+</div>

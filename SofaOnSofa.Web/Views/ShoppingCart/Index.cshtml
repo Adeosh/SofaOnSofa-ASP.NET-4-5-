@@ -1,0 +1,49 @@
+﻿@model SofaOnSofa.Web.Models.ShoppingCartIndex
+
+@{
+    ViewBag.Title = "Диван на Диване: Ваша корзина";
+}
+
+<h2>Ваша корзина</h2>
+<table width="90%" align="center">
+    <thead>
+        <tr>
+            <th align="center">Количество</th>
+            <th align="left">Товар</th>
+            <th align="right">Цена</th>
+            <th align="right">Сумма</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var line in Model.ShoppingCart.Lines)
+        {
+            <tr>
+                <td align="center">@line.Quantity</td>
+                <td align="left">@line.Product.Name</td>
+                <td align="right">@line.Product.Price.ToString("c")</td>
+                <td align="right">@((line.Quantity * line.Product.Price).ToString("c"))</td>
+                <td>
+                    @using (Html.BeginForm("RemoveFromShoppingCart", "ShoppingCart"))
+                    {
+                        @Html.Hidden("ProductId", line.Product.ProductId)
+                        @Html.HiddenFor(x => x.ReturnUrl)
+                        <input class="actionButtons" type="submit" value="Убрать" />
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="3" align="right">Общая цена:</td>
+            <td align="right">
+                @Model.ShoppingCart.ComputeTotalValue().ToString("c")
+            </td>
+        </tr>
+    </tfoot>
+</table>
+<p align="center" class="actionButtons">
+    <a href="@Model.ReturnUrl">Продолжить покупки</a>
+    @Html.ActionLink("Оплаить", "Checkout")
+</p>
+

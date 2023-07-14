@@ -1,0 +1,33 @@
+﻿@model IEnumerable<SofaOnSofa.Domain.Entities.Product>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Весь товар</h1>
+
+<table class="Grid">
+    <tr>
+        <th>№</th>
+        <th>Название</th>
+        <th class="NumericCol">Цена</th>
+        <th>Действие</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ProductId</td>
+            <td>@Html.ActionLink(item.Name, "Edit", new { item.ProductId })</td>
+            <td class="NumericCol">@item.Price.ToString("c")</td>
+            <td>
+                @using (Html.BeginForm("Delete", "Admin"))
+                {
+                    @Html.Hidden("ProductId", item.ProductId)
+                    <input type="submit" value="Удалить" />
+                }
+            </td>
+        </tr>
+    }
+</table>
+<p>@Html.ActionLink("Добавить новый товар", "Create", null, new { @class = "classname" })</p>
