@@ -1,16 +1,4 @@
-﻿/*﻿body {
-    font-size: .85em;
-    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
-    color: #232323;
-    background-color: #fff;
-}
-
-header, footer, nav, section {
-    display: block;*/
-/*}*/
-
-
-/* Styles for basic forms
+﻿/* Стили для базовых форм
 -----------------------------------------------------------*/
 fieldset {
     border: 1px solid #ddd;
@@ -36,7 +24,7 @@ textarea {
 }
 
 
-/* Styles for validation helpers
+/* Стили для помощников по проверке
 -----------------------------------------------------------*/
 .field-validation-error {
     color: #f00;
@@ -60,12 +48,15 @@ textarea {
     display: none;
 }
 
-BODY {
+/* База
+-----------------------------------------------------------*/
+
+body {
     font-family: Cambria, Georgia, "Times New Roman";
     margin: 0;
 }
 
-DIV#header DIV.title, DIV.item H3, DIV.item H4, DIV.pager A {
+DIV#header div.title, div.item h3, div.item h4, div.pager A {
     font: bold 1em "Arial Narrow", "Franklin Gothic Medium", Arial;
 }
 
@@ -75,7 +66,7 @@ DIV#header {
     color: azure;
 }
 
-    DIV#header DIV.title {
+    DIV#header div.title {
         font-size: 2em;
         padding: .6em;
     }
@@ -92,47 +83,47 @@ DIV#categories {
     padding: .3em;
 }
 
-DIV.item {
+div.item {
     border-top: 1px dotted gray;
     padding-top: .7em;
     margin-bottom: .7em;
     color: darkslategrey;
 }
 
-    DIV.item:first-child {
+    div.item:first-child {
         border-top: none;
         padding-top: 0;
     }
 
-    DIV.item H3 {
+    div.item h3 {
         font-size: 1.3em;
         margin: 0 0 .25em 0;
     }
 
-    DIV.item H4 {
+    div.item h4 {
         font-size: 1.1em;
         margin: .4em 0 0 0;
     }
 
-DIV.pager {
+div.pager {
     text-align: right;
     border-top: 2px solid silver;
     padding: .5em 0 0 0;
     margin-top: 1em;
 }
 
-    DIV.pager A {
+    div.pager A {
         font-size: 1.1em;
         color: seagreen;
         text-decoration: none;
         padding: 0 .4em 0 .4em;
     }
 
-        DIV.pager A:hover {
+        div.pager A:hover {
             background-color: darkslategray;
         }
 
-        DIV.pager A.selected {
+        div.pager A.selected {
             background-color: seagreen;
             color: azure;
         }
@@ -157,30 +148,30 @@ DIV#categories A {
     }
 
     DIV#categories A.selected:hover {
-        background-color: seagreen;
+        background-color: darkslategray;
     }
 
-FORM {
+form {
     margin: 0;
     padding: 0;
 }
 
-DIV.item FORM {
+div.item form {
     float: right;
 }
 
-DIV.item INPUT {
+div.item input {
     color: azure;
     background-color: seagreen;
     border: 1px solid black;
     cursor: pointer;
 }
 
-H2 {
+h2 {
     margin-top: 0.3em
 }
 
-TFOOT TD {
+tfoot td {
     border-top: 1px dotted gray;
     font-weight: bold;
 }

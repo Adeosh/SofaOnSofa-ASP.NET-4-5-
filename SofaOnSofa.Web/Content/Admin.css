@@ -1,8 +1,8 @@
-﻿BODY, TD {
+﻿body, td {
     font-family: Segoe UI, Verdana
 }
 
-H1 {
+h1 {
     padding: .5em;
     padding-top: 0;
     font-weight: bold;
@@ -14,26 +14,26 @@ DIV#content {
     padding: .9em;
 }
 
-TABLE.Grid TD, TABLE.Grid TH {
+table.Grid td, table.Grid th {
     border-bottom: 1px dotted gray;
     text-align: left;
 }
 
-TABLE.Grid {
+table.Grid {
     border-collapse: collapse;
     width: 100%;
 }
 
-    TABLE.Grid TH.NumericCol, Table.Grid TD.NumericCol {
+    table.Grid th.NumericCol, Table.Grid td.NumericCol {
         text-align: right;
         padding-right: 1em;
     }
 
-FORM {
+form {
     margin-bottom: 0px;
 }
 
-DIV.Message {
+div.Message {
     background: gray;
     color: White;
     padding: .2em;

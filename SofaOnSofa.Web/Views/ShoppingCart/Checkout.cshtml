@@ -11,13 +11,35 @@
     @Html.ValidationSummary()
     <h3>Отправить в</h3>
     <div>Имя: @Html.EditorFor(x => x.Name)</div>
+
     <h3>Адрес</h3>
-    <div>Улица: @Html.EditorFor(x => x.Street)</div>
-    <div>Дом: @Html.EditorFor(x => x.House)</div>
-    <div>Подъезд: @Html.EditorFor(x => x.Entrance)</div>
-    <div>Страна: @Html.EditorFor(x => x.Country)</div>
-    <div>Регион\Область: @Html.EditorFor(x => x.Region)</div>
-    <div>Город: @Html.EditorFor(x => x.City)</div>
+    <table>
+        <tr>
+            <td>Улица:</td>
+            <td>@Html.EditorFor(x => x.Street)</td>
+        </tr>
+        <tr>
+            <td>Дом:</td>
+            <td>@Html.EditorFor(x => x.House)</td>
+        </tr>
+        <tr>
+            <td>Подъезд:</td>
+            <td>@Html.EditorFor(x => x.Entrance)</td>
+        </tr>
+        <tr>
+            <td>Страна:</td>
+            <td>@Html.EditorFor(x => x.Country)</td>
+        </tr>
+        <tr>
+            <td>Регион\Область:</td>
+            <td>@Html.EditorFor(x => x.Region)</td>
+        </tr>
+        <tr>
+            <td>Город:</td>
+            <td>@Html.EditorFor(x => x.City)</td>
+        </tr>
+    </table>
+
     <h3>Опции</h3>
     <label>
         @Html.EditorFor(x => x.PaidDelivery)
