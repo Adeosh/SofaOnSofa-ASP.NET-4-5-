@@ -4,6 +4,8 @@
 * text=auto
 * linguist-vendored
 *.cs linguist-vendored=false
+*.css linguist-vendored=false
+*.xml linguist-vendored=false
 ###############################################################################
 # Set default behavior for command prompt diff.
 #
